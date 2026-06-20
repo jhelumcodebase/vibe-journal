@@ -4,10 +4,6 @@
 
 VibeJournal is an interactive, enterprise-grade AI & Software Engineering mentoring application. Powered by a Google ADK 2.0 multi-agent workflow graph, the system dynamically audits user technical skills, provides tailored mock interview questions with grading keys, and tracks learning progress over time.
 
-## 📱 Interface Preview
-
-![VibeJournal Dashboard](assets/screenshot.png)
-
 Agent generated with `agents-cli` version `0.5.0`
 
 ### 🚀 Key Features
