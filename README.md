@@ -22,6 +22,8 @@ vibe-journal/
 
 For a detailed look at VibeJournal's multi-agent graph design, thread-safe background streaming model, and database logging topology, see the [System Design Document](file:///Users/jhelumprakash/Documents/Personal%20Agentic%20Project/VibeJournal/vibe-journal/SYSTEM_DESIGN.md).
 
+For the full history of prompts used to generate and deploy this project step-by-step, see the [Replication Prompt Log](file:///Users/jhelumprakash/Documents/Personal%20Agentic%20Project/VibeJournal/vibe-journal/PROMPTS.md).
+
 ## Requirements
 
 Before you begin, ensure you have:
