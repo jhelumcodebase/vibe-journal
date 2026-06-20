@@ -4,15 +4,17 @@
 
 VibeJournal is an interactive, enterprise-grade AI & Software Engineering mentoring application. Powered by a Google ADK 2.0 multi-agent workflow graph, the system dynamically audits user technical skills, provides tailored mock interview questions with grading keys, and tracks learning progress over time.
 
+## 📱 Interface Preview
+
+![VibeJournal Dashboard](assets/screenshot.png)
+
 Agent generated with `agents-cli` version `0.5.0`
 
-VibeJournal is an interactive, enterprise-grade AI & Software Engineering mentoring application. Powered by a Google ADK 2.0 multi-agent workflow graph, the system dynamically audits user technical skills, provides tailored mock interview questions with grading keys, and tracks learning progress over time.
-
-Key Features:
-ADK 2.0 Multi-Agent Workflow: Sequential execution chain utilizing gemini-2.5-flash for mentor responses and gemini-2.5-pro for skill audit and interview coaching.
-Thread-Safe Live Streaming: Decoupled async background execution thread ensuring zero event-loop conflicts with the Streamlit frontend.
-Persistent Logging: Asynchronous FirestoreLoggerPlugin to log conversation details and structured Pydantic schemas without blocking UI performance.
-Global Load Routing: Built-in exponential backoff retries and global location init to safely handle Gemini rate limits and Vertex AI quotas.
+### 🚀 Key Features
+- **ADK 2.0 Multi-Agent Workflow**: Sequential execution chain utilizing `gemini-2.5-flash` for mentor responses and `gemini-2.5-pro` for skill audit and interview coaching.
+- **Thread-Safe Live Streaming**: Decoupled async background execution thread ensuring zero event-loop conflicts with the Streamlit frontend.
+- **Persistent Logging**: Asynchronous `FirestoreLoggerPlugin` to log conversation details and structured Pydantic schemas without blocking UI performance.
+- **Global Load Routing**: Built-in exponential backoff retries and global location init to safely handle Gemini rate limits and Vertex AI quotas.
 
 ## Project Structure
 
