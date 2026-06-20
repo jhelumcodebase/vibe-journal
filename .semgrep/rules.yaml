@@ -1,0 +1,42 @@
+rules:
+  - id: detect-prompt-injection-risk
+    patterns:
+      - pattern-either:
+          # Match string concatenation
+          - pattern: |
+              $PROMPT + $INPUT
+          # Match f-string interpolation
+          - pattern: |
+              f"...{$INPUT}..."
+          # Match format function
+          - pattern: |
+              "...".format(..., $INPUT, ...)
+      - pattern-inside: |
+              from google import genai
+              ...
+      - pattern-inside: |
+              from google.agents import $AGENT
+              ...
+      - pattern-inside: |
+              import vertexai
+              ...
+    message: "Potential Prompt Injection Risk: Raw inputs or variable concatenation detected within prompt/agent context. Use structured inputs (System/User roles) or dedicated parameterized variables rather than manual string construction."
+    languages: [python]
+    severity: WARNING
+
+  - id: detect-hardcoded-api-keys
+    patterns:
+      - pattern-either:
+          - pattern: |
+              $API_KEY = "$KEY"
+          - pattern: |
+              $VAL = {"api_key": "$KEY", ...}
+      - metavariable-regex:
+          metavariable: $API_KEY
+          regex: (?i)(api_key|secret|token|passwd|password)
+      - metavariable-regex:
+          metavariable: $KEY
+          regex: ^[A-Za-z0-9_\-]{16,}$
+    message: "Hardcoded Credential/API Key Risk: A literal value was assigned to a variable representing a secret/API key. Secrets should be retrieved using environment variables (e.g. `os.environ`) or GCP Secret Manager."
+    languages: [python]
+    severity: ERROR
