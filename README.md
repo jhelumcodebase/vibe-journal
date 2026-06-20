@@ -18,6 +18,10 @@ vibe-journal/
 
 > 💡 **Tip:** Use [Gemini CLI](https://github.com/google-gemini/gemini-cli) for AI-assisted development - project context is pre-configured in `GEMINI.md`.
 
+## 📐 Architecture & System Design
+
+For a detailed look at VibeJournal's multi-agent graph design, thread-safe background streaming model, and database logging topology, see the [System Design Document](file:///Users/jhelumprakash/Documents/Personal%20Agentic%20Project/VibeJournal/vibe-journal/SYSTEM_DESIGN.md).
+
 ## Requirements
 
 Before you begin, ensure you have:
